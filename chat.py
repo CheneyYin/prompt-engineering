@@ -8,6 +8,16 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 openai.base_url = "https://api.deepseek.com"
 
 def get_completion(model: str, prompt):
+    """
+    Generates a completion for a given prompt using the specified model.
+
+    Parameters:
+    model (str): The name of the model to use for generating the completion.
+    prompt (str): The input prompt for which the completion is to be generated.
+
+    Returns:
+    str: The generated completion text.
+    """
     messages = [
         {"role": "user", "content": prompt},
     ]
